@@ -69,13 +69,18 @@ create table Orders(
 	OrderID int not null auto_increment primary key,
     OrdCost decimal(10,2),
     OrdTax decimal(10,2),
-    foreign key PaymentID(PaymentID) references PaymentInfo(PaymentID),
-    foreign key CustID(CustID) references CustID(CustID),
-    foreign key RestID(RestID) references RestID(RestID)
+	PaymentID int,
+	CustID int,
+	RestID int,
+    foreign key (PaymentID) references PaymentInfo(PaymentID),
+    foreign key (CustID) references Customer(CustID),
+    foreign key (RestID) references Reservation(RestID)
 );
 
 create table ProdcutsForOrder(
-	foreign key OrderID(OrderID) references Orders(orderID) on delete restrict,
-    foreign key PrdID(PrdID) references Product(PrdID) on delete restrict,
-    primary key (PrdID, OrderID)
+	foreign key (OrderID) references Orders(orderID) on delete restrict,
+    foreign key (PrdID) references Product(PrdID) on delete restrict,
+    primary key (PrdID, OrderID),
+	OrderID int,
+	PrdID int
 );
