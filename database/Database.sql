@@ -82,7 +82,7 @@ create table Orders(
     foreign key (RestID) references Reservation(RestID)
 );
 
-create table ProdcutsForOrder(
+create table ProductsForOrder(
 	foreign key (OrderID) references Orders(orderID) on delete restrict,
     foreign key (PrdID) references Product(PrdID) on delete restrict,
     primary key (PrdID, OrderID),
