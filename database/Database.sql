@@ -16,7 +16,7 @@ CREATE TABLE Customer(
 
 CREATE TABLE PaymentInfo(
 	PaymentID int not null auto_increment primary key,
-	CardNumber int,
+	CardNumber bigint(30),
 	NameOnCard varchar(50),
 	ExpirationDate DATE,
 	PaymentType varchar(20)
@@ -26,7 +26,7 @@ CREATE TABLE Product(
 	PrdID int not null auto_increment primary key,
 	PrdName varchar(100),
 	PrdDescription TEXT,
-	PrdCost decimal(10,2)	
+	PrdCost varchar(25)	
 );
 
 CREATE TABLE Hotel(
@@ -72,8 +72,8 @@ create table RoomsReserved(
 
 create table Orders(
 	OrderID int not null auto_increment primary key,
-    OrdCost decimal(10,2),
-    OrdTax decimal(10,2),
+    OrdCost money,
+    OrdTax money,
 	PaymentID int,
 	CustID int,
 	RestID int,
