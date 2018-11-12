@@ -10,7 +10,8 @@ CREATE TABLE Customer(
 	Password varchar(100),
 	Email varchar(100),
 	PhoneNumber int(13),
-	SocialSecurity int(9)
+	SocialSecurity int(9),
+	PassHash varchar(40)
 );
 
 CREATE TABLE PaymentInfo(
