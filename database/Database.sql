@@ -72,8 +72,8 @@ create table RoomsReserved(
 
 create table Orders(
 	OrderID int not null auto_increment primary key,
-    OrdCost money,
-    OrdTax money,
+    OrdCost varchar(20),
+    OrdTax varchar(20),
 	PaymentID int,
 	CustID int,
 	RestID int,
