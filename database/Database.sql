@@ -36,18 +36,20 @@ CREATE TABLE Hotel(
 );
 
 CREATE TABLE Room(
-	RoomID int not null auto_increment primary key,
-	RoomNum INT,
+    RoomID int not null auto_increment primary key,
+    RoomNum INT,
     RoomType VARCHAR(50),
     NumBeds int,
     BedType VARCHAR(50),
-    FOREIGN KEY BuildingID(BuildingID) REFERENCES Hotel(BuildingID) ON DELETE RESTRICT
+	BuildingID int,
+    FOREIGN KEY (BuildingID) REFERENCES Hotel (BuildingID)
 );
 
 create table RoomAmenities(
     AmenityID int not null auto_increment primary key,
     AmenityName VARCHAR(50),
-    foreign key RoomID(RoomID) references Room(RoomID) on delete restrict
+	RoomID int,
+    foreign key (RoomID) references Room(RoomID)
 );
 
 create table Reservation(
@@ -56,13 +58,16 @@ create table Reservation(
     DateEnd Date,
     BuildingLocation VARCHAR(100),
     BuildingZip int(5),
-    foreign key BuildingID(BuildingID) references Hotel(BuildingID)
+	BuildingID int,
+    foreign key (BuildingID) references Hotel(BuildingID)
 );
 
 create table RoomsReserved(
-	foreign key RestID(RestID) references Reservation(RestID) on delete restrict,
-    foreign key RoomID(RoomID) references Room(RoomID) on delete restrict,
-    primary key (RoomID, RestID)
+	foreign key (RestID) references Reservation(RestID),
+    foreign key (RoomID) references Room(RoomID),
+    primary key (RoomID, RestID),
+	RoomID int,
+	RestID int
 );
 
 create table Orders(
