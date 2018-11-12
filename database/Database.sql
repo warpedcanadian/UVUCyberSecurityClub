@@ -9,7 +9,7 @@ CREATE TABLE Customer(
 	Username varchar(50),
 	Password varchar(100),
 	Email varchar(100),
-	PhoneNumber int(13),
+	PhoneNumber varchar(13),
 	SocialSecurity int(9),
 	PassHash varchar(40)
 );
