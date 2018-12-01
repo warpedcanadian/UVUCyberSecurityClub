@@ -89,8 +89,8 @@ create table Orders(
 );
 
 create table ProductsForOrder(
-	foreign key (OrderID) references Orders(orderID) on delete restrict,
-    foreign key (PrdID) references Product(PrdID) on delete restrict,
+	foreign key (OrderID) references Orders(orderID),
+    foreign key (PrdID) references Product(PrdID),
     primary key (PrdID, OrderID),
 	OrderID int,
 	PrdID int
