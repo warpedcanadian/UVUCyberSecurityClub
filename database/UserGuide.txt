@@ -1,0 +1,25 @@
+Start Ubuntu Machine with the MySQL database
+Login to Admintest account with password 12345
+
+To access the MySQL database open a terminal
+type in : mysql -u root -p
+password: 12345
+
+To see databases: show databases;
+To swtich to a database: use <database name>;
+Switch to company database: use company;
+To see what tables company has: show tables;
+
+To see the output in a easy read formate from a table:
+select * from <table name> \G;
+example: select * from Customer \G;
+
+To drop database: DROP DATABASE company;
+
+If database has been dropped on accented here is how you recreate it:
+Login to database from a terminal. line 5 above.
+Once logged in, run this: source Desktop/dbscript/creationscript.sql
+(There will be some error! They will not stop the database from working.)
+
+
+
