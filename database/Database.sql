@@ -1,3 +1,7 @@
+CREATE DATABASE company;
+
+USE company;
+
 CREATE TABLE Customer(
 	CustID int not null auto_increment primary key,
 	CustFName varchar(20),
