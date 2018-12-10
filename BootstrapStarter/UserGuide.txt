@@ -1,0 +1,9 @@
+How do I start the machine?
+
+Logins necessary to access?
+
+How to start webpage?
+
+Is connection to db automatic upon startup of webpage?
+
+To see webpage in browser?
