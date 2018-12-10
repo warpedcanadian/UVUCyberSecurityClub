@@ -1,9 +1,13 @@
-How do I start the machine?
+To start:
+  Cyber Security Club will have access to all webpage files as here posted within this GitHub repository.
+  Requirements for setup is to have web files on a web server (i.e. Apache, IIS). Web files cannot be through localhost.
 
-Logins necessary to access?
 
-How to start webpage?
+Logins:
+  No logins are necessary. For a real user experience, users can see account data through back-end code.
 
-Is connection to db automatic upon startup of webpage?
+Connections:
+  Connection needs to be configured in database .dp file.
+  Setup requires IP address to be changed to the database host IP (comments in code).
 
-To see webpage in browser?
+All documentation is in the back-end code and written to an audience of IT system administrators.
