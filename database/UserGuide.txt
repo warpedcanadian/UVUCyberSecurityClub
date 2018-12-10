@@ -1,5 +1,8 @@
+Version of Ubuntu: Ubuntu 18.04.1 LTS
+Version of MySQL: mysql  Ver 8.0.13 for Linux on x86_64 (MySQL Community Server - GPL)
+
 Start Ubuntu Machine with the MySQL database
-Login to Admintest account with password 12345
+Login to Admintest account with password: 12345
 
 To access the MySQL database open a terminal
 type in : mysql -u root -p
